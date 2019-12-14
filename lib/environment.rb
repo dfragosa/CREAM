@@ -3,7 +3,11 @@ require 'json'
 require 'pry'
 require 'httparty'
 
-module CREAM
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
+require_relative './lib/api.rb'
+require_relative './lib/cli.rb'
+
+CLI.new
+
+
+
