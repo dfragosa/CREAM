@@ -1,3 +1,4 @@
+#CREAM - Cash Rules Everything Around Me
 require "CREAM/version"
 require 'json'
 require 'pry'
