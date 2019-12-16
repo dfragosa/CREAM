@@ -1,14 +1,15 @@
 #CREAM - Cash Rules Everything Around Me
-require "CREAM/version"
+
 require 'json'
 require 'pry'
 require 'httparty'
 
+require_relative "./CREAM/version"
+require_relative './CREAM/api.rb'
+require_relative './CREAM/cli.rb'
+require_relative './CREAM/jobs.rb'
 
-require_relative './lib/api.rb'
-require_relative './lib/cli.rb'
 
-CLI.new
 
 
 
