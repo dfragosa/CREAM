@@ -4,7 +4,7 @@ class  CLI
   def start
     puts" Start A Job Search"
     lang_selection
-      
+    #request
   end
   LANGUAGES = ["ruby", "java", "python", "php", "swift", "javascript"]
   
@@ -17,14 +17,17 @@ class  CLI
     
       puts "Type the language you want to view the jobs for"
    
-   choice = gets.downcase.chomp
+   choice = gets.downcase.strip.chomp
    puts choice
-       
+   if choice == "exit"
+     puts "Good Bye"
+   else 
     jobs = API.get_data(choice)
-    puts Jobs.all
-    binding.pry
-   #jobs = Jobs.new(choice)
-   #puts jobs.type
-   
+    
+    puts jobs.reject {|key| key == "description"}
+    puts jobs.inspect
+    
+   end
   end
+  
 end

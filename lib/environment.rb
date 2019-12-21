@@ -3,6 +3,7 @@
 require 'json'
 require 'pry'
 require 'httparty'
+require 'pp'
 
 require_relative "./CREAM/version"
 require_relative './CREAM/api.rb'
